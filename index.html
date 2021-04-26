@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v4.js"></script>
+<link rel="icon" type="image/png" href="icons/favicon.png"/>
+
+
+<head>
+    <title>See The Binary Tree!</title>
+</head>
+
+<!-- Visual interface structured using tables -->
+<body>
+    <table id="outside-table" cellspacing=0>
+        <tr>
+            <td id="input-cell">
+                <table id="input-table">
+                    <tr>
+                        <td class="input-row" style="height:16%">
+                            <h3 id="title" style="text-align:center">Animated Binary Trees</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-row">
+                            <div class="input-group px-4 col-auto">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text custom-select-sm">Tree type</label>
+                                </div>
+                                <select onchange="treeChange(this)" class="custom-select custom-select-sm">
+                                  <option value="1">BST</option>
+                                  <option value="2">AVL</option>
+                                  <option value="3">Red-Black</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-row">
+                            <div class="input-group px-4 col-auto">
+                                <input id="create-input" type="text" class="form-control form-control-sm" placeholder="Create tree with X nodes">
+                                <div class="input-group-append">
+                                    <button id="create-button" onclick="createClick()" class="input-group-text btn btn-outline-secondary input">
+                                    <i class="fa fa-chevron-right icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label id="create-validation" class="text-danger form-control-sm valid"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-row">
+                            <div class="input-group px-4 col-auto">
+                                <input id="add-input" type="text" class="form-control form-control-sm" placeholder="Add node X to tree">
+                                <div class="input-group-append">
+                                    <button onclick="addClick()" class="input-group-text btn btn-outline-secondary input">
+                                    <i class="fa fa-chevron-right icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label id="add-validation" class="text-danger form-control-sm valid"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-row">
+                            <div class="input-group px-4 col-auto">
+                                <input id="delete-input" type="text" class="form-control form-control-sm" placeholder="Delete node X from tree">
+                                <div class="input-group-append">
+                                    <button id="delete-button" onclick="deleteClick()" class="input-group-text btn btn-outline-secondary input" disabled>
+                                        <i class="fa fa-chevron-right icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label id="delete-validation" class="text-danger form-control-sm valid"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-row">
+                            <button id="clear-input" onclick="clearClick()"  type="button" class="btn btn-outline-secondary input" disabled>Clear tree</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-row">
+                            <button id="next" onclick="nextAnimationClick(this)" type="button" class="btn btn-outline-secondary glow-button" disabled>Next animation</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:auto"></td>
+                    </tr>
+                </table>
+            </td>
+            <td id="animation-cell">
+                <div id="frame"></div>
+                <p id="caption"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+<script src="js/trees.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/index.js"></script>

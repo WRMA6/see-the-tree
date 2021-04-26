@@ -1,0 +1,70 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.glow-button:enabled {
+    box-shadow: 0 0 0.5rem 0.2rem rgba(126, 126, 126, 0.8);
+}
+
+.icon {
+    font-size:0.9rem;
+}
+
+.input-group {
+    margin-top:1rem
+}
+
+.input-row {
+    height:12%;
+    width:100%;
+    vertical-align:center;
+    align-items:center;
+    text-align:center;
+}
+
+.valid {
+    height:auto;
+    padding:0px;
+    margin:0;
+}
+
+#animation-cell {
+    border-left: #b8b8b8 solid 0.5px;
+    background: radial-gradient(white, #fffbe8);
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    min-height:80%;
+}
+
+#caption {
+    font-weight:300;
+    font-size:1rem;
+    text-align:center;
+    margin:0;
+    min-height:1.5rem;
+}
+
+#clear-input, #next {
+    margin-top:1rem;
+}
+
+#input-cell{
+    background-image:linear-gradient(gold, #fff09c);
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+    vertical-align:top;
+}
+
+#outside-table {
+    border-collapse:separate;
+    border:solid black 1.5px;
+    border-radius:4px;
+    width:95%;
+    margin:auto;
+}
+
+#title {
+    font-size:1.5rem;
+    font-weight:600;
+    margin-top:1rem;
+}
